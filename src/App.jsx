@@ -8,7 +8,7 @@ const profile = {
   email: "sameer752591@gmail.com",
   phone: "xxxxxxx640",
   location: "Delhi, India",
-  image: "image link",
+  image: "profileimg.webp",
   about:
     "I'm a creative and passionate Frontend Developer with a keen eye for detail and a love for building beautiful, functional and user-friendly web experiences. My journey in web development is driven by the desire to turn complex problems into simple, elegant solutions. I specialize in modern web technologies and I'm always eager to learn and adapt to the ever-evolving digital landscape.",
 };
@@ -16,7 +16,7 @@ const profile = {
 const socials = [
   { name: "x", label: "X", href: "#" },
   { name: "github", label: "GitHub", href: "https://github.com/sameer7525" },
-  { name: "linkedin", label: "LinkedIn", href: "#" },
+  // { name: "linkedin", label: "LinkedIn", href: "#" },
 ];
 
 const skills = [
@@ -26,20 +26,22 @@ const skills = [
   { name: "React", slug: "react" },
   { name: "Git & GitHub", slug: "git" },
   { name: "C++", slug: "cplusplus" },
+  { name: "Tailwindcss", slug: "tailwindcss"},
+  { name: "GSAP", slug:"greensock"},
+  { name: "Framer Motion", slug:"framer"}
 ];
 
 const education = [
   {
     year: "2025",
     title: "Frontend Web Developer",
-    place: "Self-learning",
     text: "Started my journey in web development. Built responsive websites and learned modern frontend frameworks.",
   },
   {
     year: "2025 – 2028",
     title: "Graduate in Computer Science",
     place: "Deshbandhu College (University of Delhi)",
-    text: "Focused on web development, algorithms and technologies.",
+    text: "Focused on software engineering, and web technologies.",
   },
 ];
 
@@ -109,6 +111,22 @@ const services = [
     icon: "git",
   },
 ];
+
+const hire = [
+  {
+    title: "Performance Focused",
+    text: "I optimize every line of code for speed and efficiency, delivering fast user experiences.",
+  },
+  {
+    title: "Clean & Reaponsive",
+    text: "I write clean , well-structured and user-friendly interfaces that deliver a consistent experience",
+  },
+  {
+    title: "Smooth Animations",
+    text: "Create smooth and engaging animation that enhance user experience and bring interfaces to life.",
+  }
+]
+
 
 const whatsapp = "https://wa.me/919170450640?text=Hi%20Sameer%2C%20I%20saw%20your%20portfolio";
 
@@ -183,10 +201,11 @@ export default function App() {
               </a>
               <a
                 href="/resume.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-lg border border-white/15 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
               >
-                Resume
+                View Resume
               </a>
             </div>
 
@@ -231,7 +250,8 @@ export default function App() {
 
           <section id="about" className="scroll-mt-24">
             <p className="mb-8 font-display text-3xl font-bold leading-tight text-white sm:text-5xl">
-              I build fast, responsive websites that help small businesses get noticed online.
+              {/* I build fast, responsive websites that help small businesses get noticed online. */}
+              Turning ideas into interactive, responsive, and meaningful web experiences.
             </p>
             <SectionTitle>About Me</SectionTitle>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{profile.about}</p>
@@ -273,7 +293,7 @@ export default function App() {
               {services.map((sv) => (
                 <div
                   key={sv.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-violet-400/60"
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-violet-400/60 hover:bg-white/[0.1]"
                 >
                   <img src={icon(sv.icon, "c4b5fd")} alt="" className="h-8 w-8" />
                   <h3 className="mt-4 font-display text-lg font-bold text-white">{sv.title}</h3>
@@ -332,6 +352,22 @@ export default function App() {
                 </article>
               ))}
             </div>
+          </section>
+
+          <section id="hireme" className="mt-24 scroll-mt-24">
+            <SectionTitle>Why Hire Me?</SectionTitle>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {hire.map((hm) => (
+                <div
+                  key={hm.title}
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-violet-400/60 hover:bg-white/[0.1]"
+                >
+                  <h3 className="mt-4 font-display text-lg font-bold text-white">{hm.title}</h3>
+                  <p className="mt-1 text-slate-400">{hm.text}</p>
+                </div>
+              ))}
+            </div>
+
           </section>
 
           <section id="contact" className="mt-24 scroll-mt-24">
