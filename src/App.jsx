@@ -49,7 +49,7 @@ const projects = [
   {
     title: "To-Do App",
     text: "A fully responsive to-do app.",
-    image: "PASTE_TODO_PROJECT_IMAGE_LINK_HERE",
+    image: "https://cdn.dribbble.com/userupload/2865453/file/original-6aac423cd5dcb68754dc923b43f3459d.jpg?resize=200x0",
     github: "https://github.com/sameer7525/To-Do-List-App",
     live: "https://sameer7525.github.io/To-Do-List-App/",
     tags: ["HTML", "Tailwind CSS", "JavaScript"],
@@ -57,26 +57,26 @@ const projects = [
   {
     title: "Portfolio",
     text: "A fully responsive portfolio.",
-    image: "PASTE_PORTFOLIO_PROJECT_IMAGE_LINK_HERE",
+    image: "portfolioimg.jpeg",
     github: "https://github.com/sameer7525/My-portfolio",
     live: "https://sameer7525.github.io/My-portfolio/",
-    tags: ["HTML", "CSS"],
+    tags: ["HTML", "Taiwind CSS", "Javascript", "React","GSAP"],
   },
   {
     title: "Password Generator",
     text: "Secure & responsive password generator.",
-    image: "PASTE_PASSWORD_GENERATOR_IMAGE_LINK_HERE",
+    image: "https://codingmantra.com/assets/tools/random-password-generator-illustration.svg",
     github: "https://github.com/sameer7525/Password-generator",
     live: "https://password-generator-rosy-nine.vercel.app/",
     tags: ["HTML", "Tailwind CSS", "React"],
   },
   {
-    title: "To-Do App",
-    text: "A fully responsive to-do app.",
-    image: "PASTE_ANOTHER_PROJECT_IMAGE_LINK_HERE",
-    github: "https://github.com/sameer7525",
-    live: "#",
-    tags: ["HTML", "Tailwind CSS", "JavaScript"],
+    title: "TextUtils App",
+    text: "A fully responsive app.",
+    image: "",
+    github: "https://github.com/sameer7525/TextUtils-App",
+    live: "https://textutils-eight-tau.vercel.app",
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React"],
   },
 ];
 
@@ -421,7 +421,7 @@ export default function App() {
           </section>
 
           <footer className="mt-24 border-t border-white/10 pt-6 text-sm text-slate-500">
-            © {new Date().getFullYear()} {profile.name}. Built with React and Tailwind CSS.
+            © {new Date().getFullYear()} {profile.name}. Built with React, Tailwind CSS and GSAP.
           </footer>
         </main>
       </div>
